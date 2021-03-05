@@ -18,7 +18,8 @@ const App=()=>{
     // this.state.persons=this.state.persons.map(a=>{a.age=a.age+1; return a})
   // debugger
   // console.log();
-    setPersonsState({persons:personsState.persons.map(a=>{a.age=a.age+1; return a})})
+    setPersonsState({persons:personsState.persons.map(a=>{a.age=a.age+1; return a}),
+                    otherState:personsState.otherStates})
   }
 
     return (<div className="App">
