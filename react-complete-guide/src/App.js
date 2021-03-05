@@ -12,14 +12,13 @@ const App=()=>{
     ],
     otherState:"Some value"
   })
-
+  const [otherState, setOtherState]=useState("Some value")
   const swichNameHandler=()=>{
     // This one dont works
     // this.state.persons=this.state.persons.map(a=>{a.age=a.age+1; return a})
   // debugger
   // console.log();
-    setPersonsState({persons:personsState.persons.map(a=>{a.age=a.age+1; return a}),
-                    otherState:personsState.otherStates})
+    setPersonsState({persons:personsState.persons.map(a=>{a.age=a.age+1; return a})})
   }
 
     return (<div className="App">
