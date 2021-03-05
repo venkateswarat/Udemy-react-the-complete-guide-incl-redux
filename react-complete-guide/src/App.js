@@ -6,9 +6,9 @@ import Person from './Person/Person'
 class App extends Component{
   state={
     persons:[
-      {name:'a',age:28},
-      {name:'b',age:29},
-      {name:'c',age:30}
+      {name:'a',age:28,id:1},
+      {name:'b',age:29,id:2},
+      {name:'c',age:30,id:3}
     ],
     otherState:"Some value",
     showPersons:false
@@ -42,9 +42,12 @@ class App extends Component{
     if(this.state.showPersons){
       person=(
         <div>
-          <Person changed={this.nameChangedHandler} name={this.state.persons[0].name} age={this.state.persons[0].age}>a</Person>
-          <Person name={this.state.persons[1].name} age={this.state.persons[1].age} click={this.swichNameHandler.bind(this,'person')}/>
-          <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/>
+          {
+            this.state.persons.map(person=>{
+              return <Person name={person.name} age={person.age}/>
+            })
+          }
+
         </div>
       )
     }
