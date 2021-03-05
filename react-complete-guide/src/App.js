@@ -24,7 +24,7 @@ class App extends Component{
     return (<div className="App">
       Hello World
       <br/>
-      <button onClick={this.swichNameHandler.bind(this,'app')}>click me</button>
+      <button onClick={()=>{this.swichNameHandler("app1")}}>click me</button>
       <Person name={this.state.persons[0].name} age={this.state.persons[0].age}>a</Person>
       <Person name={this.state.persons[1].name} age={this.state.persons[1].age} click={this.swichNameHandler.bind(this,'person')}/>
       <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/>
