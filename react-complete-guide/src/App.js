@@ -11,11 +11,16 @@ class App extends Component{
       {name:'c',age:30}
     ]
   }
+
+  swichNameHandler=()=>{
+    console.dir(this.state)
+  }
+
   render(){
     return (<div className="App">
       Hello World
       <br/>
-      <button>click me</button>
+      <button onClick={this.swichNameHandler}>click me</button>
       <Person name={this.state.persons[0].name} age={this.state.persons[0].age}>a</Person>
       <Person name={this.state.persons[1].name} age={this.state.persons[1].age}/>
       <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/>
