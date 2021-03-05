@@ -108,6 +108,9 @@ Person component is State less component, It does not have internal State manage
 APP component is Statefull component, It  has internal State management.
 
 -----------------------
+Every component must import React and it is mandatory
+import React from 'react';
+--------------------------
 
 
 
