@@ -104,6 +104,11 @@ It is reserved property in component.
 -------------------------
 https://reactjs.org/docs/events.html#supported-events
 ---------------------
+Person component is State less component, It does not have internal State management.
+APP component is Statefull component, It  has internal State management.
+
+-----------------------
+
 
 
 
