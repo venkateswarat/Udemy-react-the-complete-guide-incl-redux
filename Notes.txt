@@ -1,2 +1,90 @@
 What is React?
 A JavaScript Library for building User Interfaces
+React component is just a function.
+-------------------------------------------
+Simple Example:
+
+<div id="p1"></div>
+<div id="p2"></div>
+
+function Person(props) {
+    return (
+        <div className="person">
+            <h1>{props.name}</h1>
+            <p>{props.age}</p>
+        </div>
+    )
+}
+
+ReatDOM.render(<Person name="Max" age="28"/>, document.querySelector("#p1"));
+ReatDOM.render(<Person name="Manu" age="30"/>, document.querySelector("#p2"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
