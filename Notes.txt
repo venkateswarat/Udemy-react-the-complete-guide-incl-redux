@@ -83,7 +83,8 @@ import prs from './person.js'
 
 import {baseData} from './utility.js'
 import {clean} from './utility.js'
-
+import {smth as Smth} from './utility.js'
+import * as Smth from './utility.js'
 
 
 
