@@ -10,7 +10,8 @@ class App extends Component{
       {name:'b',age:29},
       {name:'c',age:30}
     ],
-    otherState:"Some value"
+    otherState:"Some value",
+    showPersons:false
   }
 
   swichNameHandler=(origin)=>{
@@ -22,6 +23,10 @@ class App extends Component{
 
   nameChangedHandler=(event)=>{
     console.log(event.target.value)
+  }
+
+  togglePersonsHandler=()=>{
+    this.setState({showPersons:!this.state.showPersons})
   }
 
   render(){
@@ -37,10 +42,15 @@ class App extends Component{
     return (<div className="App">
       Hello World
       <br/>
-      <button style={style} onClick={()=>{this.swichNameHandler("app1")}}>click me</button>
-      <Person changed={this.nameChangedHandler} name={this.state.persons[0].name} age={this.state.persons[0].age}>a</Person>
-      <Person name={this.state.persons[1].name} age={this.state.persons[1].age} click={this.swichNameHandler.bind(this,'person')}/>
-      <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/>
+      <button style={style} onClick={()=>{this.togglePersonsHandler()}}>click me</button>
+      { this.state.showPersons?
+        <div>
+          <Person changed={this.nameChangedHandler} name={this.state.persons[0].name} age={this.state.persons[0].age}>a</Person>
+          <Person name={this.state.persons[1].name} age={this.state.persons[1].age} click={this.swichNameHandler.bind(this,'person')}/>
+          <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/>
+        </div>
+        :null
+      }
     </div>
     )
   }
