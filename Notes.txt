@@ -47,6 +47,10 @@ ReatDOM.render(<app/>, document.querySelector("#app"));
 
 ---------------------------------
 
+Why React?
+=> UI State becomes difficult to handle with Vanilla JavaScript.
+=> Focus on Business Logic, not on preventing your App from exploding.
+=> Huge Ecosystem, Active Community, High Performance.
 
 
 
