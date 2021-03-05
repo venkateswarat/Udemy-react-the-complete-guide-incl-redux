@@ -54,6 +54,19 @@ Why React?
 
 
 
+-----------------
+Two Kinds of Applications
+
+Single Page Applications
+    Only one html page, content is (re)rendered on Client
+    Typically only ONE ReactDOM.render() call
+
+Multi Page Applications
+    Multiple HTML Pages, Content is rendered on Server
+    One ReactDOM.render() call per "widget"
+
+
+
 
 
 
