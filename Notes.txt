@@ -22,16 +22,30 @@ ReatDOM.render(<Person name="Manu" age="30"/>, document.querySelector("#p2"));
 
 
 
+----------------------------------------
+Simple Example Two:
 
+<div id="app"></div>
 
+function Person(props) {
+    return (
+        <div className="person">
+            <h1>{props.name}</h1>
+            <p>{props.age}</p>
+        </div>
+    )
+}
 
+var app=(
+    <div>
+        <Person name="Max" age="28"/>
+        <Person name="Manu" age="30"/>
+    </div>
+    );
 
+ReatDOM.render(<app/>, document.querySelector("#app"));
 
-
-
-
-
-
+---------------------------------
 
 
 
