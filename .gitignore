@@ -1,5 +1,6 @@
 .DS_STORE
 node_modules
+*/node_modules/*
 scripts/flow/*/.flowconfig
 .flowconfig
 *~
@@ -37,3 +38,4 @@ packages/react-devtools-extensions/.tempUserDataDir
 packages/react-devtools-inline/dist
 packages/react-devtools-shell/dist
 packages/react-devtools-scheduling-profiler/dist
+react-complete-guide/node_modules/
