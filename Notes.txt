@@ -99,6 +99,10 @@ create-react-app react-complete-guide --scripts-version 1.1.5
 All html code should nested in one root element in component.
 
 ----------------------
+=>State property is managed inside component. It is available in class based component.
+It is reserved property in component.
+-------------------------
+
 
 
 
