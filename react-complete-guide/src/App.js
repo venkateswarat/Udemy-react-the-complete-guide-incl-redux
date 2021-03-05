@@ -38,19 +38,21 @@ class App extends Component{
       padding:'8px',
       cursor:'pointer'
     }
-
-    return (<div className="App">
-      Hello World
-      <br/>
-      <button style={style} onClick={()=>{this.togglePersonsHandler()}}>click me</button>
-      { this.state.showPersons?
+    let person=null;
+    if(this.state.showPersons){
+      person=(
         <div>
           <Person changed={this.nameChangedHandler} name={this.state.persons[0].name} age={this.state.persons[0].age}>a</Person>
           <Person name={this.state.persons[1].name} age={this.state.persons[1].age} click={this.swichNameHandler.bind(this,'person')}/>
           <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/>
         </div>
-        :null
-      }
+      )
+    }
+    return (<div className="App">
+      Hello World
+      <br/>
+      <button style={style} onClick={()=>{this.togglePersonsHandler()}}>click me</button>
+      {person}
     </div>
     )
   }

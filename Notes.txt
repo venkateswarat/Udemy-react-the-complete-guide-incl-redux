@@ -111,6 +111,8 @@ APP component is Statefull component, It  has internal State management.
 Every component must import React and it is mandatory
 import React from 'react';
 --------------------------
+=> Whenever react renders/re-renders component, it will execute Everything inside render method.
+------------------------
 
 
 
