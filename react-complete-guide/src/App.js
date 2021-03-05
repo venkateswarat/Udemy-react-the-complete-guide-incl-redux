@@ -20,12 +20,16 @@ class App extends Component{
     this.setState(this.state.persons.map(a=>{a.age=a.age+1; return a}))
   }
 
+  nameChangedHandler=(event)=>{
+    console.log(event.target.value)
+  }
+
   render(){
     return (<div className="App">
       Hello World
       <br/>
       <button onClick={()=>{this.swichNameHandler("app1")}}>click me</button>
-      <Person name={this.state.persons[0].name} age={this.state.persons[0].age}>a</Person>
+      <Person changed={this.nameChangedHandler} name={this.state.persons[0].name} age={this.state.persons[0].age}>a</Person>
       <Person name={this.state.persons[1].name} age={this.state.persons[1].age} click={this.swichNameHandler.bind(this,'person')}/>
       <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/>
     </div>
