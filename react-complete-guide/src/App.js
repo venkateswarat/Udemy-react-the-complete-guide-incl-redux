@@ -9,11 +9,15 @@ class App extends Component{
       {name:'a',age:28},
       {name:'b',age:29},
       {name:'c',age:30}
-    ]
+    ],
+    otherState:"Some value"
   }
 
   swichNameHandler=()=>{
-    console.dir(this.state)
+    // This one dont works
+    // this.state.persons=this.state.persons.map(a=>{a.age=a.age+1; return a})
+
+    this.setState(this.state.persons.map(a=>{a.age=a.age+1; return a}))
   }
 
   render(){
