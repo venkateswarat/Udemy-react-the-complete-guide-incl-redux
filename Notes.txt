@@ -86,7 +86,10 @@ import {clean} from './utility.js'
 import {smth as Smth} from './utility.js'
 import * as Smth from './utility.js'
 
+--------------------------------------
+https://github.com/facebook/create-react-app
 
+npm i create-react-app -g
 
 
 
