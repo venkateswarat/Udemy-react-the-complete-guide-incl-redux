@@ -65,6 +65,24 @@ Multi Page Applications
     Multiple HTML Pages, Content is rendered on Server
     One ReactDOM.render() call per "widget"
 
+------------------------
+Exports & Imports (Modules)
+
+person.js
+const person ={name:'Max'}
+export default person
+
+---------------
+utility.js
+export const clean =()=>{}
+export const baseData=10;
+
+app.js
+import person from '.persion.js'
+import prs from './person.js'
+
+import {baseData} from './utility.js'
+import {clean} from './utility.js'
 
 
 
