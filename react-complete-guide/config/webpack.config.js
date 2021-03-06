@@ -472,28 +472,6 @@ module.exports = function (webpackEnv) {
               exclude: cssModuleRegex,
               use: getStyleLoaders({
                 importLoaders: 1,
-                modules:{
-                  rules: [
-                    {
-                      test: /\.css$/i,
-                      loader: "css-loader",
-                      options: {
-                        modules: {
-                          compileType: "module",
-                          mode: "local",
-                          auto: true,
-                          exportGlobals: true,
-                          localIdentName: "[path][name]__[local]--[hash:base64:5]",
-                          localIdentContext: path.resolve(__dirname, "src"),
-                          localIdentHashPrefix: "my-custom-hash",
-                          namedExport: true,
-                          exportLocalsConvention: "camelCase",
-                          exportOnlyLocals: false,
-                        },
-                      },
-                    },
-                  ],
-                },
                 sourceMap: isEnvProduction
                   ? shouldUseSourceMap
                   : isEnvDevelopment,
