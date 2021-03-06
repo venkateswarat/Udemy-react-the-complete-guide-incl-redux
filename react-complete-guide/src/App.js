@@ -14,8 +14,8 @@ class App extends Component{
     showPersons:false
   }
 
-  nameChangedHandler=(event)=>{
-    console.log(event.target.value)
+  nameChangedHandler=(event,id)=>{
+    console.log(event.target.value,id)
   }
 
   deletePersonHandler=(personIndex)=>{
@@ -44,7 +44,7 @@ class App extends Component{
         <div>
           {
             this.state.persons.map((person,index)=>{
-              return <Person click={()=>this.deletePersonHandler(index)} key={person.id} name={person.name} age={person.age}/>
+              return <Person click={()=>this.deletePersonHandler(index)} key={person.id} name={person.name} age={person.age} changed={((event)=>this.nameChangedHandler(event,person.id))}/>
             })
           }
 
