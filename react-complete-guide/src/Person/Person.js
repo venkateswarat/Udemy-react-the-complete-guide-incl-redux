@@ -1,6 +1,5 @@
 import React from 'react';
 import './Person.css'
-import Radium,{StyleRoot} from 'radium'
 
 const person =(props)=>{
     const style={
@@ -14,4 +13,4 @@ const person =(props)=>{
                 <input type="text" onChange={props.changed} value={props.name}/>
             </div>
 }
-export default Radium(person);
+export default person;
