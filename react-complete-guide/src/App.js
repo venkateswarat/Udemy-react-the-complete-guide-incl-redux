@@ -14,17 +14,15 @@ class App extends Component{
     showPersons:false
   }
 
-  swichNameHandler=(origin)=>{
-    // This one dont works
-    // this.state.persons=this.state.persons.map(a=>{a.age=a.age+1; return a})
-    alert(origin)
-    this.setState(this.state.persons.map(a=>{a.age=a.age+1; return a}))
-  }
-
   nameChangedHandler=(event)=>{
     console.log(event.target.value)
   }
 
+  deletePersonHandler=(personIndex)=>{
+    const persons = this.state.persons;
+    persons.splice(personIndex, 1);
+    this.setState({persons:persons})
+  }
   togglePersonsHandler=()=>{
     this.setState({showPersons:!this.state.showPersons})
   }
@@ -43,8 +41,8 @@ class App extends Component{
       person=(
         <div>
           {
-            this.state.persons.map(person=>{
-              return <Person name={person.name} age={person.age}/>
+            this.state.persons.map((person,index)=>{
+              return <Person click={()=>this.deletePersonHandler(index)} name={person.name} age={person.age}/>
             })
           }
 
