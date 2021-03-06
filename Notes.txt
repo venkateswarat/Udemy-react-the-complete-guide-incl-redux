@@ -117,8 +117,8 @@ Radium pacakge is used handling sudo css events in react applications
 ---------------------------------------
 https://styled-components.com/ 
 ---------------------
-
-
+// for re-configuing for css
+npm run eject
 
 
 
