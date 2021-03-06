@@ -1,4 +1,4 @@
-import './App.css';
+import classes from './App.css';
 import React,{Component} from 'react';
 import Person from './Person/Person'
 
@@ -60,18 +60,18 @@ class App extends Component{
         color:'black'
       }
     }
-    let classes=[];
+    let assignedclasses=[];
     if(this.state.persons.length<=2){
-      classes.push('red');
+      assignedclasses.push(classes.red);
     }
     if(this.state.persons.length<=1){
-      classes.push('bold');
+      assignedclasses.push(classes.bold);
     }
-    return (<div className="App">
+    return (<div className={classes.App}>
       Hello World
       <br/>
-      <p className={classes.join(" ")}>Custom CSS with ClassName</p>
-      <button  className="button" onClick={()=>{this.togglePersonsHandler()}}>click me</button>
+      <p className={assignedclasses.join(" ")}>Custom CSS with ClassName</p>
+      <button  className={classes.Button} onClick={()=>{this.togglePersonsHandler()}}>click me</button>
       {person}
     </div>
     )
