@@ -1,7 +1,7 @@
 import classes from './App.css';
 import React,{Component} from 'react';
 import Persons from '../components/Persons/Persons';
-
+import Cockpit from '../components/Cockpit/Cockpit';
 class App extends Component{
   state={
     persons:[
@@ -59,18 +59,9 @@ class App extends Component{
         color:'black'
       }
     }
-    let assignedclasses=[];
-    if(this.state.persons.length<=2){
-      assignedclasses.push(classes.red);
-    }
-    if(this.state.persons.length<=1){
-      assignedclasses.push(classes.bold);
-    }
+    
     return (<div className={classes.App}>
-      Hello World
-      <br/>
-      <p className={assignedclasses.join(" ")}>Custom CSS with ClassName</p>
-      <button  className={classes.Button} onClick={()=>{this.togglePersonsHandler()}}>click me</button>
+     <Cockpit showPersons={this.state.showPersons} persons={this.state.persons} clicked={this.togglePersonsHandler}/>
       {person}
     </div>
     )
