@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React,{Component, Fragment} from 'react';
 import './Person.css'
 import styled from 'styled-components';
 import Aux from '../../../hoc/Auxliliary';
@@ -24,11 +24,11 @@ class Person extends Component{
                     width: '450px'
             }
         }
-        return (<Aux>
+        return (<Fragment>
                     <p  onClick={this.props.click}>I am {this.props.name}. {this.props.age}  Years. addition {1+2}</p>,
                     <p>{this.props.children}</p>,
                     <input   type="text" onChange={this.props.changed} value={this.props.name}/>
-                </Aux>);
+                </Fragment>);
                     
     }
     
