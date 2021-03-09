@@ -24,11 +24,11 @@ class Person extends Component{
                     width: '450px'
             }
         }
-        return (   <StyledDiv>
-                    <p onClick={this.props.click}>I am {this.props.name}. {this.props.age}  Years. addition {1+2}</p>
-                    <p>{this.props.children}</p>
-                    <input type="text" onChange={this.props.changed} value={this.props.name}/>
-                    </StyledDiv>)
+        return [
+                    <p key='a1' onClick={this.props.click}>I am {this.props.name}. {this.props.age}  Years. addition {1+2}</p>,
+                    <p key='a2'>{this.props.children}</p>,
+                    <input  key='a3' type="text" onChange={this.props.changed} value={this.props.name}/>
+                    ]
     }
     
 }
