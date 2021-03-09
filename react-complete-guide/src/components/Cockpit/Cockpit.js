@@ -6,6 +6,9 @@ const Cockpit = (props)=>{
     // this one will run for every update
     useEffect(()=>{
       console.log('[Cockpit.js] useEffect');
+      setTimeout(()=>{
+        alert('Saved data to cloud!')
+      },1000);
     });
     let assignedclasses=[];
 
