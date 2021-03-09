@@ -1,8 +1,8 @@
 import React,{Component, Fragment} from 'react';
-import './Person.css'
+import classes from './Person.css'
 import styled from 'styled-components';
 import Aux from '../../../hoc/Auxliliary';
-
+import withClass from '../../../hoc/withClass';
 
 const StyledDiv = styled.div`
     width: 60%;
@@ -33,4 +33,4 @@ class Person extends Component{
     }
     
 }
-export default Person;
+export default withClass(Person, classes.Person);
