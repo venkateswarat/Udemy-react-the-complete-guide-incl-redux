@@ -9,7 +9,17 @@ const Cockpit = (props)=>{
       setTimeout(()=>{
         alert('Saved data to cloud!')
       },1000);
+      // This return statement is used for clean up activities
+      return ()=>{
+        console.log('[cockpit.js] cleanup work in useEffect');
+      };
     },[]);
+    useEffect(()=>{
+      console.log('[Cockpit.js] 2nd useEffect');
+      return ()=>{
+        console.log('[cockpit.js] cleanup work 2nd in useEffect');
+      }
+    });
     let assignedclasses=[];
 
     let btnClass='';
