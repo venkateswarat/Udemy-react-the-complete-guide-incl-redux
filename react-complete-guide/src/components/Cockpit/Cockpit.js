@@ -6,12 +6,11 @@ const Cockpit = (props)=>{
     // this one will run for every update
     useEffect(()=>{
       console.log('[Cockpit.js] useEffect');
-      const timer = setTimeout(()=>{
+      setTimeout(()=>{
         alert('Saved data to cloud!')
       },1000);
       // This return statement is used for clean up activities
       return ()=>{
-        clearTimeout(timer);
         console.log('[cockpit.js] cleanup work in useEffect');
       };
     },[]);
