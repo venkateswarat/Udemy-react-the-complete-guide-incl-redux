@@ -135,6 +135,8 @@ https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 ------------------------------
 on change of Props or state, component will reevaluates
 -----------------------
+When app component is changes, It will render all child components irrespective of, those child components being changed.
+-----------------
 
 
 
