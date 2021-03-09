@@ -132,6 +132,10 @@ Component lifecycle - Creation
 
 Constructor:- for setting basic initial state
 https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+------------------------------
+on change of Props or state, component will reevaluates
+-----------------------
+
 
 
 
