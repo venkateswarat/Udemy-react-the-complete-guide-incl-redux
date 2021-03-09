@@ -119,6 +119,17 @@ https://styled-components.com/
 ---------------------
 // for re-configuing for css
 npm run eject
+-----------------
+Presentational(Stateless) component that does not manage state of the component.
+-------------------
+Before 16.0
+Class based components for state full components
+Function based components for state less components.
+
+from 16.0 the above diff changed.
+-----------------------------
+
+
 
 
 

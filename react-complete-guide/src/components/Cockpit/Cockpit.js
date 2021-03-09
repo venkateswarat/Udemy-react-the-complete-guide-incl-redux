@@ -18,7 +18,7 @@ const cockpit = (props)=>{
 
     return (
         <div> Hello World
-            <br/>
+            <br/>{props.title}
             <p className={assignedclasses.join(" ")}>Custom CSS with ClassName</p>
             <button  className={classes.Button} onClick={()=>{props.clicked()}}>click me</button>
         </div>
