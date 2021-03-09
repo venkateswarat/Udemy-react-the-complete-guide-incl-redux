@@ -128,7 +128,10 @@ Function based components for state less components.
 
 from 16.0 the above diff changed.
 -----------------------------
+Component lifecycle - Creation
 
+Constructor:- for setting basic initial state
+https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 
 
 

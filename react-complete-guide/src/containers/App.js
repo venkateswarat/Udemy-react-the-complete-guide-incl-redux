@@ -3,6 +3,10 @@ import React,{Component} from 'react';
 import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
 class App extends Component{
+  constructor(props){
+    super(props);
+    console.log('[App.js] constructor');
+  }
   state={
     persons:[
       {name:'a',age:28,id:1},
@@ -13,6 +17,13 @@ class App extends Component{
     showPersons:false
   }
 
+  static getDerivedStateFromProps(props, state){
+    console.log('[App.js] getDerivedStateFromProps', props);
+    return state;
+  }
+  componentDidMount(){
+    console.log('[App.js] componentDidMount');
+  }
   nameChangedHandler=(event,id)=>{
     console.log(event.target.value,id)
   }
