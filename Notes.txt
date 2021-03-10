@@ -137,7 +137,11 @@ on change of Props or state, component will reevaluates
 -----------------------
 When app component is changes, It will render all child components irrespective of, those child components being changed.
 -----------------
-
+npm install --save prop-types
+# It is used for makesure that props types.
+passing the correct props to component.
+not to passing additional props
+--------------------------------
 
 
 
