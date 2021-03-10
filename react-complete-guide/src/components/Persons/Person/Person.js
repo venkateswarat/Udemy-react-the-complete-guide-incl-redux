@@ -3,6 +3,7 @@ import classes from './Person.css'
 import styled from 'styled-components';
 import Aux from '../../../hoc/Auxliliary';
 import withClass from '../../../hoc/withClass';
+import PropTypes from 'prop-types';
 
 const StyledDiv = styled.div`
     width: 60%;
@@ -32,5 +33,11 @@ class Person extends Component{
                     
     }
     
+}
+Person.propTypes={
+    click:PropTypes.func,
+    name:PropTypes.string,
+    age:PropTypes.number,
+    changed:PropTypes.func,
 }
 export default withClass(Person, classes.Person);
